@@ -1,0 +1,9 @@
+services:
+  backend:
+    build: front-end/.
+    ports:
+    - "8081:8081"
+  frontend:
+    build: payment-api/.
+    ports:
+    - "9091:80"

@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "oec-art-platformeng-master", "oec-art-platformeng-master", "{D26BCDF7-297F-49E1-BBEC-F49C8E598508}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "oec-art-platformeng", "oec-art-platformeng", "{9695E3AD-3CB1-43E6-8563-744E5F62E056}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "payments-api", "oec-art-platformeng-master\oec-art-platformeng\payments-api\payments-api.csproj", "{A4D5EA8B-86FE-4071-A517-D85247475916}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A4D5EA8B-86FE-4071-A517-D85247475916}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4D5EA8B-86FE-4071-A517-D85247475916}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4D5EA8B-86FE-4071-A517-D85247475916}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4D5EA8B-86FE-4071-A517-D85247475916}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9695E3AD-3CB1-43E6-8563-744E5F62E056} = {D26BCDF7-297F-49E1-BBEC-F49C8E598508}
+		{A4D5EA8B-86FE-4071-A517-D85247475916} = {9695E3AD-3CB1-43E6-8563-744E5F62E056}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A0EF0620-21E9-457C-956C-4925CF81DBC3}
+	EndGlobalSection
+EndGlobal
