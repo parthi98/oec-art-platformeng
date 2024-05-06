@@ -1,11 +1,15 @@
-FROM maven as build 
-WORKDIR /app
-COPY . .
-RUN  mvn install
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
+WORKDIR /App
 
-FROM openjdk
-WORKDIR /app
-COPY --from=build /app/target/payment-o.0.1-SNAPSHOT.jar /app
-EXPOSE 8081
-CMD ["java","-jar","payment-o.0.1-SNAPSHOT.jar"]
+# Copy everything
+COPY . ./
+# Restore as distinct layers
+RUN dotnet restore
+# Build and publish a release
+RUN dotnet publish -c Release -o out
 
+# Build runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /App
+COPY --from=build-env /App/out .
+ENTRYPOINT ["dotnet", "DotNet.Docker.dll"]
